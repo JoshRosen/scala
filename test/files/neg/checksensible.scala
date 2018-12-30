@@ -76,12 +76,18 @@ class EqEqRefTest {
   final class C3 extends C2 { def !=(other: Z1) = false }
   val z1 = new Z1
   val c3 = new C3
+  object MyEnum extends Enumeration {
+    val X = Value("x")
+  }
+  val enumValue: MyEnum.Value = MyEnum.X
 
   // these should always warn
   c3 == z1
   z1 == c3
   z1 != c3
   c3 != "abc"
+  enumValue == z1
+  z1 == enumValue
   // this should warn when feeling chatty
   c3 != z1
 

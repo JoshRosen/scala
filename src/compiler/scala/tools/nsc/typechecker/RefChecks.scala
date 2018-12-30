@@ -1016,7 +1016,7 @@ abstract class RefChecks extends Transform {
       // equals.
       def isUsingWarnableEquals = {
         val m = receiver.info.member(nme.equals_)
-        ((m == Object_equals) || (m == Any_equals) || isMethodCaseEquals(m))
+        ((m == Object_equals) || (m == Any_equals) || (m == Enumeration_equals) || isMethodCaseEquals(m))
       }
       def isMethodCaseEquals(m: Symbol) = m.isSynthetic && m.owner.isCase
       def isCaseEquals = isMethodCaseEquals(receiver.info.member(nme.equals_))

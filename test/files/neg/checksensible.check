@@ -100,21 +100,24 @@ checksensible.scala:66: warning: comparing values of types Int and Null using `=
 checksensible.scala:71: warning: comparing values of types Bip and Bop using `==' will always yield false
   (x1 == x2)
       ^
-checksensible.scala:81: warning: comparing values of types EqEqRefTest.this.C3 and EqEqRefTest.this.Z1 using `==' will always yield false
+checksensible.scala:85: warning: comparing values of types EqEqRefTest.this.C3 and EqEqRefTest.this.Z1 using `==' will always yield false
   c3 == z1
      ^
-checksensible.scala:82: warning: comparing values of types EqEqRefTest.this.Z1 and EqEqRefTest.this.C3 using `==' will always yield false
+checksensible.scala:86: warning: comparing values of types EqEqRefTest.this.Z1 and EqEqRefTest.this.C3 using `==' will always yield false
   z1 == c3
      ^
-checksensible.scala:83: warning: comparing values of types EqEqRefTest.this.Z1 and EqEqRefTest.this.C3 using `!=' will always yield true
+checksensible.scala:87: warning: comparing values of types EqEqRefTest.this.Z1 and EqEqRefTest.this.C3 using `!=' will always yield true
   z1 != c3
      ^
-checksensible.scala:84: warning: comparing values of types EqEqRefTest.this.C3 and String using `!=' will always yield true
+checksensible.scala:88: warning: comparing values of types EqEqRefTest.this.C3 and String using `!=' will always yield true
   c3 != "abc"
      ^
-checksensible.scala:95: warning: comparing values of types Unit and Int using `!=' will always yield true
+checksensible.scala:90: warning: EqEqRefTest.this.Z1 and EqEqRefTest.this.MyEnum.Value are unrelated: they will most likely never compare equal
+  z1 == enumValue
+     ^
+checksensible.scala:101: warning: comparing values of types Unit and Int using `!=' will always yield true
     while ((c = in.read) != -1)
                          ^
 error: No warnings can be incurred under -Xfatal-warnings.
-36 warnings found
+37 warnings found
 one error found

@@ -1131,6 +1131,9 @@ trait Definitions extends api.StandardDefinitions {
     def Object_hashCode  = getMemberMethod(ObjectClass, nme.hashCode_)
     def Object_toString  = getMemberMethod(ObjectClass, nme.toString_)
 
+    // Scala Enumerations
+    def Enumeration_equals = getMemberMethod(getRequiredClass("scala.Enumeration$Value"), nme.equals_)
+
     // boxed classes
     lazy val ObjectRefClass         = requiredClass[scala.runtime.ObjectRef[_]]
     lazy val VolatileObjectRefClass = requiredClass[scala.runtime.VolatileObjectRef[_]]
